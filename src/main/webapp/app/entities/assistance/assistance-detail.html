@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Assistance</span> {{vm.assistance.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Init</span></dt>
+        <dd>
+            <span>{{vm.assistance.init | date:'medium'}}</span>
+        </dd>
+        <dt><span>End</span></dt>
+        <dd>
+            <span>{{vm.assistance.end | date:'medium'}}</span>
+        </dd>
+        <dt><span>Shop</span></dt>
+        <dd>
+            <a ui-sref="shop-detail({id:vm.assistance.shopId})">{{vm.assistance.shopName}}</a>
+        </dd>
+        <dt><span>Employee</span></dt>
+        <dd>
+            <a ui-sref="employee-detail({id:vm.assistance.employeeId})">{{vm.assistance.employeeName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="assistance-detail.edit({id:vm.assistance.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

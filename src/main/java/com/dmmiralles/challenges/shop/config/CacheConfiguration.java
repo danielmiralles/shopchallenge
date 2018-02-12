@@ -44,6 +44,10 @@ public class CacheConfiguration {
             cm.createCache(com.dmmiralles.challenges.shop.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.dmmiralles.challenges.shop.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.dmmiralles.challenges.shop.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.dmmiralles.challenges.shop.domain.EmployeeType.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dmmiralles.challenges.shop.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dmmiralles.challenges.shop.domain.Shop.class.getName(), jcacheConfiguration);
+            cm.createCache(com.dmmiralles.challenges.shop.domain.Assistance.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
