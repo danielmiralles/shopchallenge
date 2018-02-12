@@ -1,0 +1,11 @@
+package com.dmmiralles.challenges.shop.repository;
+
+import com.dmmiralles.challenges.shop.domain.Authority;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * Spring Data JPA repository for the Authority entity.
+ */
+public interface AuthorityRepository extends JpaRepository<Authority, String> {
+}
